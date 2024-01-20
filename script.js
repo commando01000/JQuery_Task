@@ -54,7 +54,11 @@ $(".toggle").click(function (e) {
 
 $(".nav-link").click(function (e) {
   let sectionName = $(this).attr("href");
-  $("html, body").animate({
-    scrollTop: $(sectionName).offset().top,
-  },500);
+  sectionTop = $(sectionName).offset().top;
+  $("html, body").animate(
+    {
+      scrollTop: sectionTop,
+    },
+    500
+  );
 });

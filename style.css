@@ -32,7 +32,7 @@ header {
   color: white;
 }
 
-/* html,
+html,
 body {
-  overflow-y: scroll;
-} */
+  scroll-behavior: smooth;
+}
