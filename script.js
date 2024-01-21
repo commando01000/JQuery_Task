@@ -62,3 +62,37 @@ $(".nav-link").click(function (e) {
     500
   );
 });
+
+// Create a new date for the event
+var eventDate = new Date();
+eventDate.setDate(eventDate.getDate() + 45);
+eventDate.setHours(eventDate.getHours() + 22);
+eventDate.setMinutes(eventDate.getMinutes() + 40);
+eventDate.setSeconds(eventDate.getSeconds() + 30);
+
+// Update the countdown every second
+let x = setInterval(function () {
+  var currentDate = new Date();
+  var timeDifference = eventDate.getTime() - currentDate.getTime(); // difference in milliseconds
+
+  // Calculate days, hours, minutes, and seconds
+  var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  var hours = Math.floor(
+    (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+  // Update the countdown display
+  $(".days .number").text(days + "D");
+  $(".hours .number").text(hours + "H");
+  $(".minutes .number").text(minutes + "M");
+  $(".seconds .number").text(seconds + "S");
+
+  // If the countdown is over, stop the interval
+  if (timeDifference < 0) {
+    clearInterval(x);
+    // Display a message or take action when the countdown is over
+  }
+}, 1000);
+

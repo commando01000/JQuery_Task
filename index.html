@@ -58,7 +58,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link text-truncate">
+            <a href="#count-down" class="nav-link text-truncate">
               <span class="ms-1 d-none d-sm-inline">Duration</span></a
             >
           </li>
@@ -166,41 +166,48 @@
         </div>
       </div>
     </section>
-    <section class="count-down m-auto">
-      <div class="count-down-container">
+    <section id="count-down" class="count-down overflow-hidden m-auto">
+      <div class="count-down-container position-relative">
+        <div class="count-down-layer position-absolute"></div>
         <div class="background-image">
-          <img src="./images/invitation-2508607__340.jpg" alt="invitation" />
+          <img
+            src="./images/invitation-2508607__340.jpg"
+            class="w-100"
+            alt="invitation"
+          />
         </div>
-        <!-- <div class="row">
-          <div class="col-md-3">
-            <div class="count-down-box text-center">
-              <div class="days">
-                <div class="number">00</div>
+        <div class="timer position-absolute">
+          <div class="row gx-2">
+            <div class="col-md-3">
+              <div class="count-down-box text-center">
+                <div class="days">
+                  <div class="number"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="count-down-box text-center">
+                <div class="hours">
+                  <div class="number"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="count-down-box text-center">
+                <div class="minutes">
+                  <div class="number"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="count-down-box text-center">
+                <div class="seconds">
+                  <div class="number"></div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="count-down-box text-center">
-              <div class="hours">
-                <div class="number">00</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="count-down-box text-center">
-              <div class="minutes">
-                <div class="number">00</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="count-down-box text-center">
-              <div class="seconds">
-                <div class="number">00</div>
-              </div>
-            </div>
-          </div>
-        </div> -->
+        </div>
       </div>
     </section>
     <script
