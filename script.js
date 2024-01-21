@@ -55,12 +55,9 @@ $(".toggle").click(function (e) {
 $(".nav-link").click(function (e) {
   let sectionName = $(this).attr("href");
   sectionTop = $(sectionName).offset().top;
-  $("html, body").animate(
-    {
-      scrollTop: sectionTop,
-    },
-    500
-  );
+  $("html, body").animate({
+    scrollTop: sectionTop,
+  },100);
 });
 
 // Create a new date for the event
