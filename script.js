@@ -65,7 +65,7 @@ $(".nav-link").click(function (e) {
 
 // Create a new date for the event
 var eventDate = new Date();
-eventDate.setDate(eventDate.getDate() + 45);
+eventDate.setDate(eventDate.getDate() + 360);
 eventDate.setHours(eventDate.getHours() + 22);
 eventDate.setMinutes(eventDate.getMinutes() + 40);
 eventDate.setSeconds(eventDate.getSeconds() + 30);
@@ -96,3 +96,8 @@ let x = setInterval(function () {
   }
 }, 1000);
 
+$("#typing").keyup(function (e) {
+  var count = $(this).val().length;
+  console.log(count);
+  $("#chars").text(100 - count);
+});
