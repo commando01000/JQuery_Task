@@ -27,7 +27,7 @@ $(".sidebar-toggler").click(function (e) {
 $(".btn-close").click(function (e) {
   $(".sidebar-toggler").animate(
     {
-      left: -sidebarWidth - 5 + sidebarButtonWidth * 2,
+      left: sidebarWidth - 10 + sidebarButtonWidth * 2,
     },
     400
   );
