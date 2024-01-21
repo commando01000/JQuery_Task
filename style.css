@@ -36,3 +36,16 @@ html,
 body {
   scroll-behavior: smooth;
 }
+
+.count-down {
+  background-color: #e68285;
+}
+.backgorund-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* .background-image img {
+  width: 100%;
+  height: 100%;
+} */
