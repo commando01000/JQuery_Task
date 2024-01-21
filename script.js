@@ -1,4 +1,4 @@
-var sidebarWidth = $("#offcanvas").width();
+var sidebarWidth = $("#offcanvas").offset().left;
 var sidebarButtonWidth = $(".sidebar-toggler").outerWidth();
 console.log(sidebarWidth);
 console.log(sidebarButtonWidth);
@@ -9,14 +9,14 @@ $(".sidebar-toggler").click(function (e) {
   if (isSidebarOpen) {
     $(".sidebar-toggler").animate(
       {
-        left: -sidebarWidth - 5 + sidebarButtonWidth * 2,
+        left: sidebarWidth - 10 + sidebarButtonWidth * 2,
       },
       400
     );
   } else {
     $(".sidebar-toggler").animate(
       {
-        left: sidebarWidth,
+        left: -sidebarWidth,
       },
       400
     );
@@ -55,9 +55,12 @@ $(".toggle").click(function (e) {
 $(".nav-link").click(function (e) {
   let sectionName = $(this).attr("href");
   sectionTop = $(sectionName).offset().top;
-  $("html, body").animate({
-    scrollTop: sectionTop,
-  },100);
+  $("html, body").animate(
+    {
+      scrollTop: sectionTop,
+    },
+    100
+  );
 });
 
 // Create a new date for the event
