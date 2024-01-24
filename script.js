@@ -58,8 +58,7 @@ $(".nav-link").click(function (e) {
   $("html, body").animate(
     {
       scrollTop: sectionTop,
-    },
-    100
+    },1000
   );
 });
 
