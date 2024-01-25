@@ -57,7 +57,7 @@ body {
 }
 
 .timer {
-  top: 50%;
+  top: 40%;
   left: 0;
   right: 0;
   bottom: 0;
@@ -69,6 +69,8 @@ body {
 .minutes,
 .seconds {
   border: 1px solid #f0f0f0; /* Example border color */
+  width: 100px;
+  height: 100px;
 }
 
 .number {
